@@ -108,13 +108,24 @@
   left: -9999em;
 }
 
-.weui-cells_radio .weui-cell__ft {
-  padding-left: 0.35em;
+.weui-cells_checkbox .weui-cell__hd {
+  padding-right: 0.35em;
 }
 
-.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+.weui-cells_checkbox .weui-icon-checked:before {
+  content: '\EA01';
+  color: #C9C9C9;
+  font-size: 23px;
   display: block;
-  content: '\EA08';
+}
+
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
+  content: '\EA06';
   color: #09BB07;
-  font-size: 16px;
+}
+
+[class^="weui-icon-"]:before, [class*=" weui-icon-"]:before {
+    display: inline-block;
+    margin-left: .2em;
+    margin-right: .2em;
 }
