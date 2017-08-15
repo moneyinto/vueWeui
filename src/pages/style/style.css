@@ -1,6 +1,17 @@
-/**
-    basic css
-*/
-.text-red {
-    color: red;
+.container {
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #efefef;
+}
+
+.home-item {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.m-b {
+    margin-bottom: 10px;
 }

@@ -1,28 +1,26 @@
 <template>
-    <div id="Home">
-        <div>{{ msg }}</div>
-        <img src="../../assets/logo.png">
+    <div class="container">
+        <div class="home-item" @click="alert()">
+            弹出框
+        </div>
+        <dialog-tip v-if="dialog.visible" @cancelDialog="dialog.visible = false" @dialogSure="dialog.visible = false" :title="dialog.title" :message="dialog.message" :visible="dialog.visible"></dialog-tip>
 
-        <router-link class="text-red" to="me">me</router-link>
-
-        <button @click="alert()">dialog</button>
-
-        <dialog-tip v-if="dialog.visible" @cancelDialog="dialog.visible = false" @dialogSure="dialog.visible = false" v-bind:title="dialog.title" v-bind:message="dialog.message" v-bind:visible="dialog.visible"></dialog-tip>
-
+        <div class="home-item" @click="loadingShow()">
+            Loading
+        </div>
         <loading v-if="loading"></loading>
+
+        <div class="home-item" @click="$router.push('button')">
+            按钮
+        </div>
     </div>
 </template>
 
 <script>
-import dialogTip from '../../components/dialogTip';
-
-import loading from '../../components/loading';
-
 export default {
     data() {
         return {
-            msg: 'Welcome to Your Vue.js App',
-            loading: true,
+            loading: false,
             dialog: {
                 visible: false,
                 title: '提示',
@@ -31,26 +29,22 @@ export default {
         };
     },
 
-    mounted() {
-        setTimeout(() => {
-            this.loading = false;
-        }, 2000);
-    },
-
-    components: {
-        dialogTip,
-        loading
-    },
-
     methods: {
         alert() {
             this.dialog.visible = true;
             this.dialog.message = '好好好！';
+        },
+
+        loadingShow() {
+            this.loading = true;
+            setTimeout(() => {
+                this.loading = false;
+            }, 2000);
         }
     }
 };
 </script>
 
 <style scoped>
-    @import '../style/style.css';
+@import '../style/style.css';
 </style>
