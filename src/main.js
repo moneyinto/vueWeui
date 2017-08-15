@@ -5,7 +5,6 @@ import App from './App';
 import router from './router';
 import overAll from './components';
 
-console.log(overAll);
 Vue.use(overAll);
 
 Vue.config.productionTip = false;

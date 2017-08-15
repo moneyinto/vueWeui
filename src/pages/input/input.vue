@@ -1,0 +1,49 @@
+<template>
+    <div class="container">
+        <div class="m-b p-l">单选列表 <span>{{radioSource.checked}}</span></div>
+        <radio :source="radioSource"></radio>
+
+        <div class="m-b p-l m-t">自定义单选列表</div>
+        <custom-radio>
+            <radio-item name="customRadio" v-for="(item,index) in radioSource.list" :source="radioSource" :key="index" :value="item.value">
+                {{ index + '.' + item.name }}
+            </radio-item>
+        </custom-radio>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            radioSource: {
+                checked: 1,
+                list: [
+                    {
+                        name: 'radio one',
+                        value: 1
+                    },
+
+                    {
+                        name: 'radio two',
+                        value: 2
+                    },
+
+                    {
+                        name: 'radio three',
+                        value: 3
+                    }
+                ]
+            }
+        };
+    }
+};
+</script>
+
+<style scoped>
+@import '../style/style.css';
+
+.container {
+    padding: 20px 0;
+}
+</style>

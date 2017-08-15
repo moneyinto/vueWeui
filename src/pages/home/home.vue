@@ -13,6 +13,10 @@
         <div class="home-item" @click="$router.push('button')">
             按钮
         </div>
+
+        <div class="home-item" @click="$router.push('input')">
+            表单
+        </div>
     </div>
 </template>
 
