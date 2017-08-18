@@ -19,5 +19,5 @@
 </script>
 
 <style scoped>
-@import './radio.css';
+@import '../input.css';
 </style>

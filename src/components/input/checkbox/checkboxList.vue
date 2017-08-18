@@ -19,5 +19,5 @@
 </script>
 
 <style scoped>
-@import './checkbox.css';
+@import '../input.css';
 </style>

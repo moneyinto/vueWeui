@@ -108,6 +108,17 @@
   left: -9999em;
 }
 
+.weui-cells_radio .weui-cell__ft {
+  padding-left: 0.35em;
+}
+
+.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+  display: block;
+  content: '\EA08';
+  color: #09BB07;
+  font-size: 16px;
+}
+
 .weui-cells_checkbox .weui-cell__hd {
   padding-right: 0.35em;
 }
@@ -128,4 +139,35 @@
     display: inline-block;
     margin-left: .2em;
     margin-right: .2em;
+}
+
+.weui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.47058824em;
+    line-height: 1.47058824;
+}
+
+.weui-label {
+    display: block;
+    width: 105px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.weui-cells[text-right] .weui-input {
+    text-align: right;
+}
+
+.weui-cells[text-left] .weui-input {
+    text-align: left;
+}
+
+.weui-cells[text-center] .weui-input {
+    text-align: center;
 }

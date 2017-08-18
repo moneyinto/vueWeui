@@ -19,6 +19,18 @@
                 {{ index + '.' + item.name }}
             </checkbox-item>
         </custom-checkbox-list>
+
+        <vw-input class="m-t" placeholder="请输入"></vw-input>
+        <vw-input class="m-t" placeholder="请输入" label="姓名"></vw-input>
+        <vw-input class="m-t" placeholder="请输入" label="年龄" text-right></vw-input>
+        <div class="m-t p-m">
+            <div style="float: right;line-height: 30px">{{switchInput.checked}}</div>
+            <switch-input :checked="switchInput" @switchChange="switchChange()"></switch-input>
+        </div>
+
+        <div class="m-t p-m bg-white p-v">
+            <vm-textarea placeholder="请输入"></vm-textarea>
+        </div>
     </div>
 </template>
 
@@ -64,8 +76,18 @@ export default {
                         value: 3
                     }
                 ]
+            },
+
+            switchInput: {
+                checked: true
             }
         };
+    },
+
+    methods: {
+        switchChange() {
+            alert('switch change');
+        }
     }
 };
 </script>
