@@ -1,14 +1,19 @@
 <template>
     <div class="container">
+        <div class="p-m p-v">
+            <h2>VueWeUI</h2>
+            <p class="text-grey">VueWeUI 闲来无事，将weui的样式使用vue组件化</p>
+        </div>
+
         <div class="home-item" @click="alert()">
             弹出框
         </div>
-        <dialog-tip v-if="dialog.visible" @cancelDialog="dialog.visible = false" @dialogSure="dialog.visible = false" :title="dialog.title" :message="dialog.message" :visible="dialog.visible"></dialog-tip>
+        <vm-dialog-tip v-if="dialog.visible" @cancelDialog="dialog.visible = false" @dialogSure="dialog.visible = false" :title="dialog.title" :message="dialog.message" :visible="dialog.visible"></vm-dialog-tip>
 
         <div class="home-item" @click="loadingShow()">
             Loading
         </div>
-        <loading v-if="loading"></loading>
+        <vm-loading v-if="loading"></vm-loading>
 
         <div class="home-item" @click="$router.push('button')">
             按钮
@@ -16,6 +21,10 @@
 
         <div class="home-item" @click="$router.push('input')">
             表单
+        </div>
+
+        <div class="home-item" @click="$router.push('list')">
+            列表
         </div>
     </div>
 </template>

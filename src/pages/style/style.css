@@ -16,6 +16,10 @@
     margin-bottom: 10px;
 }
 
+.m-l {
+    margin-left: 10px;
+}
+
 .m-t {
     margin-top: 10px;
 }
@@ -34,12 +38,20 @@
     padding-bottom: 20px;
 }
 
+.p-n {
+    padding: 0;
+}
+
 .bg-white {
     background: #fff;
 }
 
 .text-grey {
     color: grey;
+}
+
+img {
+    display: block;
 }
 
 @font-face {

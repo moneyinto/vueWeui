@@ -3,14 +3,14 @@ import Router from 'vue-router';
 import Home from '@/pages/home/home';
 import Button from '@/pages/button/button';
 import Input from '@/pages/input/input';
+import List from '@/pages/list/list';
 
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
     routes: [
         {
-            path: '',
+            path: '/',
             redirect: '/home'
         },
 
@@ -30,6 +30,12 @@ export default new Router({
             path: '/input',
             name: 'input',
             component: Input
+        },
+
+        {
+            path: '/list',
+            name: 'list',
+            component: List
         }
     ]
 });

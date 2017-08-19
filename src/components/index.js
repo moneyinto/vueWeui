@@ -1,31 +1,45 @@
-import loading from './loading';
-import dialogTip from './dialogTip';
-import weuiBtn from './weuiBtn';
+import vmLoading from './loading';
+import vmDialogTip from './dialogTip';
+import vmBtn from './button.vue';
 
-import radioList from './input/radio/radioList';
-import customRadioList from './input/radio/customRadioList';
-import radioItem from './input/radio/radioItem';
-import checkboxList from './input/checkbox/checkboxList';
-import customCheckboxList from './input/checkbox/customCheckboxList';
-import checkboxItem from './input/checkbox/checkboxItem';
+import vmRadioList from './input/radio/radioList';
+import vmCustomRadioList from './input/radio/customRadioList';
+import vmRadioItem from './input/radio/radioItem';
+import vmCheckboxList from './input/checkbox/checkboxList';
+import vmCustomCheckboxList from './input/checkbox/customCheckboxList';
+import vmCheckboxItem from './input/checkbox/checkboxItem';
 import vwInput from './input/input';
-import switchInput from './input/switch';
+import vmSwitch from './input/switch';
 import vmTextarea from './input/textarea';
+
+import vmList from './list/list';
+import vmListRow from './list/listRow';
+import vmListItem from './list/listItem';
+import vmListHd from './list/listHd';
+import vmListBd from './list/listBd';
+import vmListFt from './list/listFt';
 
 export default {
     install(Vue) {
-        Vue.component('loading', loading);
-        Vue.component('dialogTip', dialogTip);
-        Vue.component('weuiBtn', weuiBtn);
+        Vue.component('vmLoading', vmLoading);
+        Vue.component('vmDialogTip', vmDialogTip);
+        Vue.component('vmBtn', vmBtn);
 
-        Vue.component('radioList', radioList);
-        Vue.component('customRadioList', customRadioList);
-        Vue.component('radioItem', radioItem);
-        Vue.component('checkboxList', checkboxList);
-        Vue.component('customCheckboxList', customCheckboxList);
-        Vue.component('checkboxItem', checkboxItem);
+        Vue.component('vmRadioList', vmRadioList);
+        Vue.component('vmCustomRadioList', vmCustomRadioList);
+        Vue.component('vmRadioItem', vmRadioItem);
+        Vue.component('vmCheckboxList', vmCheckboxList);
+        Vue.component('vmCustomCheckboxList', vmCustomCheckboxList);
+        Vue.component('vmCheckboxItem', vmCheckboxItem);
         Vue.component('vwInput', vwInput);
-        Vue.component('switchInput', switchInput);
+        Vue.component('vmSwitch', vmSwitch);
         Vue.component('vmTextarea', vmTextarea);
+
+        Vue.component('vmList', vmList);
+        Vue.component('vmListRow', vmListRow);
+        Vue.component('vmListItem', vmListItem);
+        Vue.component('vmListHd', vmListHd);
+        Vue.component('vmListBd', vmListBd);
+        Vue.component('vmListFt', vmListFt);
     }
 };

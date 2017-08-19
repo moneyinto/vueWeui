@@ -171,3 +171,7 @@
 .weui-cells[text-center] .weui-input {
     text-align: center;
 }
+
+.weui-cell:first-child:before {
+    display: none;
+}

@@ -1,31 +1,31 @@
 <template>
     <div class="container">
         <div class="m-b p-l">单选列表 {{ radioSource.checked }}</div>
-        <radio-list :source="radioSource"></radio-list>
+        <vm-radio-list :source="radioSource"></vm-radio-list>
 
         <div class="m-b p-l m-t">自定义单选列表</div>
-        <custom-radio-list>
-            <radio-item name="customRadio" v-for="(item,index) in radioSource.list" :source="radioSource" :key="index" :value="item.value">
+        <vm-custom-radio-list>
+            <vm-radio-item name="customRadio" v-for="(item,index) in radioSource.list" :source="radioSource" :key="index" :value="item.value">
                 {{ index + '.' + item.name }}
-            </radio-item>
-        </custom-radio-list>
+            </vm-radio-item>
+        </vm-custom-radio-list>
 
         <div class="m-b p-l m-t">复选列表 {{ JSON.stringify(checkboxSource.checked) }}</div>
-        <checkbox-list :source="checkboxSource"></checkbox-list>
+        <vm-checkbox-list :source="checkboxSource"></vm-checkbox-list>
 
         <div class="m-b p-l m-t">自定义复选列表</div>
-        <custom-checkbox-list>
-            <checkbox-item v-for="(item,index) in checkboxSource.list" :source="checkboxSource" :key="index" :value="item.value">
+        <vm-custom-checkbox-list>
+            <vm-checkbox-item v-for="(item,index) in checkboxSource.list" :source="checkboxSource" :key="index" :value="item.value">
                 {{ index + '.' + item.name }}
-            </checkbox-item>
-        </custom-checkbox-list>
+            </vm-checkbox-item>
+        </vm-custom-checkbox-list>
 
         <vw-input class="m-t" placeholder="请输入"></vw-input>
         <vw-input class="m-t" placeholder="请输入" label="姓名"></vw-input>
         <vw-input class="m-t" placeholder="请输入" label="年龄" text-right></vw-input>
         <div class="m-t p-m">
             <div style="float: right;line-height: 30px">{{switchInput.checked}}</div>
-            <switch-input :checked="switchInput" @switchChange="switchChange()"></switch-input>
+            <vm-switch :checked="switchInput" @switchChange="switchChange()"></vm-switch>
         </div>
 
         <div class="m-t p-m bg-white p-v">
