@@ -4,6 +4,7 @@ import Home from '@/pages/home/home';
 import Button from '@/pages/button/button';
 import Input from '@/pages/input/input';
 import List from '@/pages/list/list';
+import Slider from '@/pages/slider/slider';
 
 Vue.use(Router);
 
@@ -36,6 +37,12 @@ export default new Router({
             path: '/list',
             name: 'list',
             component: List
+        },
+
+        {
+            path: '/slider',
+            name: 'slider',
+            component: Slider
         }
     ]
 });

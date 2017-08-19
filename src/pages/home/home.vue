@@ -26,6 +26,10 @@
         <div class="home-item" @click="$router.push('list')">
             列表
         </div>
+
+        <div class="home-item" @click="$router.push('slider')">
+            滑块
+        </div>
     </div>
 </template>
 

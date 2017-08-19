@@ -19,6 +19,8 @@ import vmListHd from './list/listHd';
 import vmListBd from './list/listBd';
 import vmListFt from './list/listFt';
 
+import vmSlider from './slider/slider';
+
 export default {
     install(Vue) {
         Vue.component('vmLoading', vmLoading);
@@ -41,5 +43,7 @@ export default {
         Vue.component('vmListHd', vmListHd);
         Vue.component('vmListBd', vmListBd);
         Vue.component('vmListFt', vmListFt);
+
+        Vue.component('vmSlider', vmSlider);
     }
 };
