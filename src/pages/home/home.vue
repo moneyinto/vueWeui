@@ -30,6 +30,14 @@
         <div class="home-item" @click="$router.push('slider')">
             滑块
         </div>
+
+        <div class="home-item" @click="$router.push('navbar')">
+            菜单
+        </div>
+
+        <div class="home-item" @click="$router.push('tabbar')">
+            Tab
+        </div>
     </div>
 </template>
 

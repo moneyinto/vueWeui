@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="m-b p-l">slider {{ slider.value}}</div>
+        <div class="m-b">Slider {{ slider.value}}</div>
         <vm-slider :slider="slider"></vm-slider>
     </div>
 </template>

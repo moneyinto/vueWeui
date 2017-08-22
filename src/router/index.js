@@ -5,6 +5,8 @@ import Button from '@/pages/button/button';
 import Input from '@/pages/input/input';
 import List from '@/pages/list/list';
 import Slider from '@/pages/slider/slider';
+import Navbar from '@/pages/navbar/navbar';
+import Tabbar from '@/pages/tabbar/tabbar';
 
 Vue.use(Router);
 
@@ -43,6 +45,18 @@ export default new Router({
             path: '/slider',
             name: 'slider',
             component: Slider
+        },
+
+        {
+            path: '/navbar',
+            name: 'navbar',
+            component: Navbar
+        },
+
+        {
+            path: '/tabbar',
+            name: 'tabbar',
+            component: Tabbar
         }
     ]
 });

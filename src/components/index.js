@@ -21,6 +21,9 @@ import vmListFt from './list/listFt';
 
 import vmSlider from './slider/slider';
 
+import vmNavbar from './navbar/navbar';
+import vmTabbar from './tabbar/tabbar';
+
 export default {
     install(Vue) {
         Vue.component('vmLoading', vmLoading);
@@ -45,5 +48,8 @@ export default {
         Vue.component('vmListFt', vmListFt);
 
         Vue.component('vmSlider', vmSlider);
+
+        Vue.component('vmNavbar', vmNavbar);
+        Vue.component('vmTabbar', vmTabbar);
     }
 };

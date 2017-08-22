@@ -64,11 +64,6 @@
     color: #999999;
 }
 
-.weui-check {
-    position: absolute;
-    left: -9999em;
-}
-
 [class^="weui-icon-"], [class*=" weui-icon-"] {
     display: inline-block;
     vertical-align: middle;
